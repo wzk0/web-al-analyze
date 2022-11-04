@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="Description" content="{{ ar }}的专辑 - {{ name }}.">
+	<link rel="shortcut icon" href="https://ghproxy.com/https://github.com/wzk0/photo/blob/main/icon.png?raw=true">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ ar }} - {{ name }}</title>
+	<style>
+		body{
+			background: url({{ data[0]['cover'] }});
+			background-attachment:fixed;
+		}
+		.top{
+			background: rgba(204,229,255,0.5);
+			font-family: "ubuntu"; 
+			height: 80px;
+			width: 480px;
+			margin:auto;
+			border-radius: 28px; 
+			box-shadow: black 0px 0px 15px;
+		}
+		.top_h{
+			padding-top: 20px;
+			height: 80px;
+			text-align: center;
+		}
+		.pp{
+			text-align: center;
+			height: 50%;
+			font-family: "ubuntu";
+			font-weight: bold;
+			color: 	black;
+		}
+		.dv{
+			background: rgba(204,229,255,0.5);
+			font-family: "ubuntu"; 
+			border: 0px solid black; 
+			border-radius: 28px; 
+			padding: 10px 30px; 
+			width: 600px; 
+			height: 50px;
+			margin: 50px 20px;
+			box-shadow: black 0px 0px 15px;
+		}
+		.dv:hover{
+			filter: brightness(1.1);
+			box-shadow: black 0px 0px 25px;
+		}
+		.top:hover{
+			filter: brightness(1.1);
+			box-shadow: black 0px 0px 25px;
+		}
+	</style>
+	<div class='top'><h1 class="top_h">《{{ name }}》from {{ ar }}</h1></div>
+</head>
+<body><br><br>
+<center>
+	{% for l in data %}
+	<div class="dv"><p class="pp">{{ l['name'] }} - {{ ar }}</p><br><br>
+	</div><audio preload="metadata" controls><source src="{{ l['url'] }}" type="audio/mpeg"></audio><br><br><br>
+	{% endfor %}
+</center>
+</body>
+</html>
