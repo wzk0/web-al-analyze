@@ -32,7 +32,7 @@ flask run
 
 * Demo
 
-或访问此Demo站 >> url
+或访问此Demo站 >> http://thdbd.pythonanywhere.com
 
 ### 制作你的专辑集
 
